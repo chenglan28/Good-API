@@ -1,0 +1,1 @@
+betterTable = (a)=>{var r="",i=0;for(;i<a.length;i++){r+="<tr><td>"+a[i].join("</td><td>")+"</td></tr>"}return r}
