@@ -1,5 +1,6 @@
 # 介绍
 欢迎使用Good API(GAPI)，它包含了许多API在其中，您可以免费使用，当然你也可以为它添置一些新功能，它会是你写程序的好帮手
+(部分功能为网上收集，如侵害了您的利益，请联系QQ3168265272)
 # 目录
 Good API包含有一些文件在其中
 + main.js
@@ -47,9 +48,12 @@ betterTable = ()=>{/*betterTable函数*/};
 对象类的功能一般放在 object/ 下
 ### 选择器
 综合的选择器
-暂不支持quote引用
+quote引用:
+```javascript
+query = $GAPI.quote("query")
+```
 储存位置:
-object/object.js
+other/object-v1.js 或 other/object-v1-min.js
 调用方法:
 ```javascript
 query(string)
@@ -146,8 +150,8 @@ betterTable([
     <td>C2</td>
 </tr>
 ```
-## 计算类
-计算类一般储存在 math/ 下
+## 数组类
+数组类一般储存在 array/ 下
 ### 平均数
 求平均数
 quote引用:
@@ -155,7 +159,7 @@ quote引用:
 average = $GAPI.quote("average");
 ```
 储存位置:
-math/average.js 或 math/average-min.js
+array/average.js 或 array/average-min.js
 调用方法:
 ```javascript
 average(array)
@@ -176,7 +180,7 @@ quote引用:
 median = $GAPI.quote("median");
 ```
 储存位置:
-math/median.js 或 math/median-min.js
+array/median.js 或 array/median-min.js
 调用方法:
 ```javascript
 median(array)
@@ -197,7 +201,7 @@ quote引用:
 mode = $GAPI.quote("mode");
 ```
 储存位置:
-math/mode.js 或 math/mode-min.js
+array/mode.js 或 array/mode-min.js
 调用方式:
 ```javascript
 mode(array)
@@ -244,10 +248,61 @@ quote引用:
 variance = $GAPI.quote("variance")
 ```
 储存位置:
-math/variance.js 或 math/variance-min.js
+array/variance.js 或 array/variance-min.js
 调用方式:
 ```javascript
 variance(array)
+```
+### 去除相同元素
+去除 数组 中与 另一个值 相同的 元素
+quote引用:
+```javascript
+removeElement = $GAPI.quote("removeElement");
+```
+储存位置:
+array/removeElement.js 或 array/removeElement-min.js
+调用方法:
+```javascript
+removeElement(array,val)
+```
+例如:
+```javascript
+removeElement([3,3,2,2,1,1],2)
+```
+返回:
+```javascript
+[3,3,1,1]
+```
+### 有效数独判断
+判断数独是否有效
+quote引用:
+```javascript
+isValidSudoku = $GAPI.quote("isValidSudoku")
+```
+储存位置:
+array/isValidSudoku.js 或 array/isValidSudoku-min.js
+调用方式:
+```javascript
+isValidSudoku(array)
+```
+array - 二维数组(空白用 . 表示)
+例如:
+```javascript
+isValidSudoku([
+["5","3",".",".","7",".",".",".","."],
+["6",".",".","1","9","5",".",".","."],
+[".","9","8",".",".",".",".","6","."],
+["8",".",".",".","6",".",".",".","3"],
+["4",".",".","8",".","3",".",".","1"],
+["7",".",".",".","2",".",".",".","6"],
+[".","6",".",".",".",".","2","8","."],
+[".",".",".","4","1","9",".",".","5"],
+[".",".",".",".","8",".",".","7","9"]
+])
+```
+返回:
+```javascript
+true
 ```
 ## 文字类
 文字类一般储存在 string/ 下

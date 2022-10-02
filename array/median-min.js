@@ -1,0 +1,1 @@
+median=(a)=>{a=a.sort();if(a.length%2==1){return a[(a.length-1)/2]}else{return(a[a.length/2-1]+a[a.length/2])/2}}

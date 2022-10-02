@@ -1,0 +1,1 @@
+average=(a)=>{var n=0;for(var i =0;i<a.length;i++){n+=a[i]}return n/a.length}
