@@ -1,0 +1,1 @@
+variance=(a)=>{var r =0,n=0;for(var i=0;i<a.length;i++){n+=a[i]};n=n/a.length;for(var i=0;i<a.length;i++){ r+=Math.pow(a[i]-n,2)}return r / a.length}

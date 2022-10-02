@@ -1,0 +1,1 @@
+statistics=(ine)=>{if(typeof ine == "number"){ine = ine + ''}ine=ine.split("");var r=[],i=0;for(;i<ine.length;i++){var f=1,j=0;for(;j<r.length;j++){if(r[j].inner==ine[i]){r[j].count++;f=2}}if(f==1){r.push({inner:ine[i],count:1})}}return r;}

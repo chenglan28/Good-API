@@ -1,1 +1,1 @@
-mode=(a)=>{if(typeof a=="string"){a=a.split("")};var r=[];for(var i=0;i<a.length;i++){var flag=0;for(var j=0;j<r.length;j++){if(r[j][0]==a[i]){flag=1;r[j][1]++}}if(flag == 0){r.push([a[i],1])}}var j=0;for(var i=0;i<r.length;i++){if(r[i][1]>r[j][1]){j=i}}return r[j][0]}
+mode=(a)=>{if(typeof a=="string"){a=a.split("")};var r=[];for(var i=0;i<a.length;i++){var f=0;for(var j=0;j<r.length;j++){if(r[j][0]==a[i]){f=1;r[j][1]++}}if(f == 0){r.push([a[i],1])}}var j=0;for(var i=0;i<r.length;i++){if(r[i][1]>r[j][1]){j=i}}return r[j][0]}
