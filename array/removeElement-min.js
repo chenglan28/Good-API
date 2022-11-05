@@ -1,1 +1,1 @@
-removeElement=(n,v)=>{for(var i=0;i<n.length;i++){if(n[i]==v){n.splice(i,1);i--}}return n.length}
+removeElement=(n,v)=>{var r=[];for(var i=0;i<n.length;i++){if(n[i]!=v){r.push(n[i])}}return r}
